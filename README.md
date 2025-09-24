@@ -18,11 +18,10 @@ Started on Zig Day 2025 when classic CHIP-8's instruction set became too much of
 ## Memory Layout
 
 ```plain
-0x00000  General RAM     (40KB)
-0x0A000  Data Stack      (8KB) 
-0x0C000  Call Stack      (4KB, hands off)
-0x0D000  Program Code    (44KB)
-0x18000  Void            (don't go here)
+0x00000  General RAM     (20KB)
+0x4E20   Stack           (14KB) 
+0x84D0  Program Code     (30KB)
+0xFA00  Void             (don't go here)
 ```
 
 ## Instructions That Matter
