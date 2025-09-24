@@ -32,7 +32,7 @@ Keeping the retro spirit alive while adding custom sprites and better I/O for a 
 
 The Ne8zip VM features:
 - *Registers:* $16$ general-purpose (`R0-R15`), R0 hardwired to zero, `R14` as stack pointer, `R15` for return addresses
-- *Memory:* $96"KB"$ total, byte-addressable
+- *Memory:* $64"KB"$ total, byte-addressable
 - *Stack:* Dedicated data stack with push/pop operations (grows downward)
 - *Display:* $800 times 450$ pixels, $24"bit"$ RGB color
 - *Timing:* $60"Hz"$ timer, synchronous execution

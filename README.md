@@ -8,7 +8,7 @@ Started on Zig Day 2025 when classic CHIP-8's instruction set became too much of
 
 ## The Good Stuff
 
-- 96KB memory (not 4KB like some peasant)
+- 64KB memory (not 4KB like some peasant)
 - 800×450 RGB display instead of that green monochrome nonsense
 - 24-bit instructions with proper formats
 - A stack.
