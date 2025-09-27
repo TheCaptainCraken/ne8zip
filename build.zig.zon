@@ -1,9 +1,14 @@
 .{
     .name = .ne8zip,
-    .version = "0.0.0",
+    .version = "0.0.1",
     .fingerprint = 0x5a2dabae74553cd4, // Changing this has security and trust implications.
     .minimum_zig_version = "0.16.0-dev.252+ae00a2a84",
-    .dependencies = .{},
+    .dependencies = .{
+        .raylib_zig = .{
+            .url = "git+https://github.com/raylib-zig/raylib-zig?ref=devel#a1d02a5ec8886e7d65608339686f809a6223e103",
+            .hash = "raylib_zig-5.6.0-dev-KE8REIJDBQCMJ0Ioir2v_pdVL1Wm4jyY7zg48DDr-ePw",
+        },
+    },
     .paths = .{
         "build.zig",
         "build.zig.zon",

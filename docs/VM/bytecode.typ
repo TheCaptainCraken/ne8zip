@@ -263,8 +263,7 @@ Syscalls use registers R1-R5 for parameters, R1 for return values. Unused parame
 #table(
   columns: (auto, auto, auto, auto),
   [*Range*], [*Size*], [*Purpose*], [*Access*],
-  [0x0000-0x4E20], [20KB], [General RAM], [Read/Write],
-  [0x4E20-0x84D0], [14KB], [Stack], [Internal use only],
+  [0x0000-0x84D0], [34KB], [General RAM], [Read/Write],
   [0x84D0-0xFA00], [30KB], [Program Code], [Read/Execute],
   [0xFA00-0xFFFFFF], [-], [Unmapped], [Access fault],
 )

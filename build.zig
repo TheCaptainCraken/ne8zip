@@ -7,6 +7,15 @@ pub fn build(b: *std.Build) void {
         .root_source_file = b.path("src/root.zig"),
         .target = target,
     });
+
+    const raylib_dep = b.dependency("raylib_zig", .{
+        .target = target,
+        .optimize = optimize,
+    });
+
+    const raylib = raylib_dep.module("raylib"); // main raylib module
+    const raylib_artifact = raylib_dep.artifact("raylib"); // raylib C library
+
     const exe = b.addExecutable(.{
         .name = "ne8zip",
         .root_module = b.createModule(.{
@@ -19,6 +28,9 @@ pub fn build(b: *std.Build) void {
         }),
     });
 
+    exe.linkLibrary(raylib_artifact);
+    mod.addImport("raylib", raylib);
+    
     b.installArtifact(exe);
 
     const run_step = b.step("run", "Run the app");
